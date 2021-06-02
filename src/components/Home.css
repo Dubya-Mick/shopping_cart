@@ -1,0 +1,30 @@
+.home-main {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-image: url(https://source.unsplash.com/LVJRzXqbJ1s/);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.splash-wrapper {
+    margin-top: 15rem;
+    margin-right: 0.5rem;
+
+}
+
+.big-bucket {
+    text-align: right;
+    font-size: 4rem;
+
+}
+
+.nothing {
+    text-align: right;
+    font-size: 2rem;
+    
+}

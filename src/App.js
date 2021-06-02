@@ -1,7 +1,21 @@
+import NavBar from './components/NavBar';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Catalogue from './components/Catalogue';
+import ShoppingBucket from './components/ShoppingBucket';
+import './App.css';
+
 function App() {
   return (
-    <div>
-      Hello World!
+    <div className="App">
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/catalogue" component={Catalogue} />
+          <Route exact path="/shopping-bucket" component={ShoppingBucket} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
