@@ -1,0 +1,27 @@
+img {
+    width: 20rem;
+    height: 20rem;
+    cursor: pointer;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bucket-image {
+    object-fit: cover;
+}
+
+.fade-in {
+    transition: opacity 1s;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}

@@ -1,9 +1,21 @@
 import React from 'react'
+import ItemCard from './ItemCard'
+import './Catalogue.css'
 
-function Catalogue() {
+function Catalogue({ bucketList }) {
+
+    const bucketCards = bucketList.map(bucket => (
+       <div>
+           <ItemCard 
+                bucket={bucket}
+           />
+       </div> 
+    ));
+
+
     return (
-        <div>
-            Catalogue
+        <div className="catalogue">
+            {bucketCards}
         </div>
     )
 }

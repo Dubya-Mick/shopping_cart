@@ -11,7 +11,7 @@ function NavBar() {
                 </div>
                 <div className="right-links">
                     <Link to="/catalogue">Catalogue</Link>
-                    <Link to="/shopping-bucket">Bucket</Link>
+                    <Link to="/shopping-bucket">Bucket (0)</Link>
                 </div>
             </div>
         </nav>

@@ -1,0 +1,14 @@
+.catalogue {
+    max-width: 50rem;
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 720px) {
+    .catalogue {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
