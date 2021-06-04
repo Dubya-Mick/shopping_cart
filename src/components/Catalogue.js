@@ -5,7 +5,7 @@ import './Catalogue.css'
 function Catalogue({ bucketList }) {
 
     const bucketCards = bucketList.map(bucket => (
-       <div>
+       <div key={bucket.id}>
            <ItemCard 
                 bucket={bucket}
            />
