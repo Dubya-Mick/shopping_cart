@@ -5,7 +5,11 @@ a {
 
 .main-nav {
     z-index: 5;
-    background-color: rgba(1, 1, 1, 0.4)
+    width: 100%;
+    background-color: rgba(1, 1, 1, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .link-wrapper {
@@ -17,7 +21,7 @@ a {
 }
 
 .right-links {
-    width: 10rem;
+    width: 12rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -1,15 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import bucketList from '../bucketList';
+import AddToCart from './AddToCart';
 import './Item.css'
 
-
-function Item() {
+function Item({ addItem }) {
     const { bucketID } = useParams();
     const bucket = bucketList.find(({ id }) => id === bucketID);
 
     return (
-        <div>
+        <div className="item-wrapper">
             <div>
                 <img 
                     className="bucket-display"
@@ -17,6 +17,10 @@ function Item() {
                     src={`https://source.unsplash.com/${bucket.imgID}`}
                 />
             </div>
+            <AddToCart 
+                bucket={bucket}
+                addItem={addItem}
+            />
         </div>
     )
 }

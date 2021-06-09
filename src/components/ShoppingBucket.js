@@ -1,9 +1,18 @@
 import React from 'react'
+import CartItem from './CartItem'
+import './ShoppingBucket.css'
 
-function ShoppingBucket() {
+function ShoppingBucket({ cartItems, deleteItem }) {
+    const cartContents = cartItems.map(item => (
+        <CartItem 
+            bucket={item}
+        />
+    ))
+
+
     return (
-        <div>
-            Shopping Bucket
+        <div className="cart-wrapper">
+            {cartContents}
         </div>
     )
 }

@@ -20,7 +20,6 @@ function ItemCard({ bucket }) {
                     <figcaption>{bucket.name}</figcaption>
                     <figcaption>&#36;{bucket.price}</figcaption>
                 </figure>
-                
             </div>
     )
 }

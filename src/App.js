@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import NavBar from './components/NavBar';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
@@ -10,17 +11,65 @@ import Item from './components/Item';
 
 function App() {
 
+  const [cartItems, setCartItems] = useState([]);
+
+  const addItem = (newItem) => {
+    // if already in cart, increment quantity by one
+    if (cartItems.some(item => item.id === newItem.id)) {
+      changeQty(newItem.id, 1);
+    // otherwise add the item
+    } else {
+      setCartItems([...cartItems, newItem]);
+    }
+  }
+
+  const deleteItem = (id) => {
+    const updatedItems = cartItems.filter(item => item.id !== id);
+    setCartItems(updatedItems);
+  }
+
+  const changeQty = (id, change) => {
+    const updatedItems = cartItems.map((item) => {
+      if (item.id === id) {
+        return { ...item, qty: item.qty + change };
+      } 
+      return item; 
+    });
+    setCartItems(updatedItems);
+  }
+
+  const cartQty = () => {
+    const qty = cartItems.reduce((accumulator, item) => {
+      return accumulator + item.qty;
+    }, 0);
+    return qty;
+  }
+
+  useEffect(() => {
+    console.log(cartItems)
+  }, [cartItems])
+
+
   return (
     <div className="App">
-      <NavBar />
+      <NavBar 
+        cartQty={cartQty}
+      />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/catalogue">
           <Catalogue bucketList={bucketList} />
         </Route> 
-        <Route exact path="/shopping-bucket" component={ShoppingBucket} />
+        <Route exact path="/shopping-bucket">
+          <ShoppingBucket 
+            cartItems={cartItems}
+            deleteItem={deleteItem}
+          />
+        </Route>
         <Route exact path="/catalogue/:bucketID">
-          <Item />
+          <Item 
+            addItem={addItem}
+          />
         </Route>
       </Switch>
     </div>
