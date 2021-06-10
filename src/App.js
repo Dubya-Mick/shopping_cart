@@ -45,6 +45,16 @@ function App() {
     return qty;
   }
 
+  const total = () => {
+    const total = cartItems
+      .reduce((accumulator, item) => {
+        const totalForItem = item.price * item.qty;
+        return accumulator + totalForItem;
+      }, 0)
+      .toFixed(2);
+    return total;
+  }
+
   useEffect(() => {
     console.log(cartItems)
   }, [cartItems])
@@ -64,6 +74,8 @@ function App() {
           <ShoppingBucket 
             cartItems={cartItems}
             deleteItem={deleteItem}
+            changeQty={changeQty}
+            total={total}
           />
         </Route>
         <Route exact path="/catalogue/:bucketID">

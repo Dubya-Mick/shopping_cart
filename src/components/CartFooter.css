@@ -1,0 +1,27 @@
+.cart-footer {
+    z-index: 5;
+    width: 100%;
+    border-top: 1px solid black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+
+}
+
+.total {
+    font-size: 1.5rem;
+    width: 15rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout-button {
+    height: 2rem;
+}

@@ -1,5 +1,11 @@
 .cart-image {
     object-fit: cover;
-    width: 10rem;
-    height: 10rem;
+    width: 20rem;
+    height: 20rem;
+}
+
+.delete {
+    display: block;
+    width: 4rem;
+    margin-top: 3px;
 }

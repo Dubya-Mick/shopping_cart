@@ -1,15 +1,15 @@
 .cart-wrapper {
     max-width: 50rem;
-    margin: 3rem auto 0 auto;
+    margin: 3rem auto 5rem auto;
     height: 100%;
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
     justify-content: center;
     
 }
 
 @media only screen and (min-width: 720px) {
-    .catalogue {
-        grid-template-columns: repeat(2, 3fr);
+    .cart-wrapper {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
