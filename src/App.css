@@ -2,6 +2,12 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
 button {
     background-color: white;
     border: 1px solid black;

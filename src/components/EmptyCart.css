@@ -1,0 +1,32 @@
+.empty-cart {
+    color: black;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-image: url(https://source.unsplash.com/UBUBlkEVs4s);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.empty-main {
+    width: 85vw;
+    margin: 10rem auto;
+    text-align: center;
+}
+
+.empty-main > a {
+    text-decoration: underline;
+}
+
+.empty-cart-image {
+    max-width: 30rem;
+    max-height: 30rem;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+

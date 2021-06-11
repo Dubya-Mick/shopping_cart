@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import NavBar from './components/NavBar';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
@@ -54,11 +54,6 @@ function App() {
       .toFixed(2);
     return total;
   }
-
-  useEffect(() => {
-    console.log(cartItems)
-  }, [cartItems])
-
 
   return (
     <div className="App">

@@ -9,10 +9,19 @@ function ItemQtyButton({ changeQty, qty, id }) {
                     if (qty > 1) {
                         changeQty(id, -1)
                     }
-                }}>-
+                }}
+                className="plus-minus"
+            >
+                -
             </button>
             <span>{qty}</span>
-            <button onClick={() => changeQty(id, 1)}>+</button>
+            <button 
+                onClick={() => changeQty(id, 1)}
+                className="plus-minus"
+
+            >
+                +
+            </button>
         </div>
     )
 }
